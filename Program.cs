@@ -10,12 +10,16 @@ namespace CaesarCipher
             Console.WriteLine("Enter the secret message");
             string secretMessage = Console.ReadLine();
 
-            char[] secretMessageArray = new char[secretMessage.Length];
+            // This is what codecademy hinted too. 
+            char[] secretMessageArray = secretMessage.ToCharArray();
 
-            for (int i = 0; i < secretMessage.Length; i++)
-            {
-                secretMessageArray[i] = secretMessage[i];
-            }
+            // This is what I found on the internet. 
+            // char[] secretMessageArray = new char[secretMessage.Length];
+            // for (int i = 0; i < secretMessage.Length; i++)
+            // {
+            //     secretMessageArray[i] = secretMessage[i];
+            // }
+
 
             foreach (char c in secretMessageArray)
             {
