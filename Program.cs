@@ -6,9 +6,16 @@ namespace CaesarCipher
     {
         static void Main(string[] args)
         {
-            char[] alphabet = new char[] {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+            
             Console.WriteLine("Enter the secret message");
-            string secretMessage = Console.ReadLine().ToLower();
+            string message = Console.ReadLine().ToLower();
+            Encrypt(message);
+
+        }
+
+        static void Encrypt(string secretMessage)
+        {
+            char[] alphabet = new char[] {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
             char[] secretMessageArray = secretMessage.ToCharArray();
 
@@ -33,7 +40,6 @@ namespace CaesarCipher
             }
 
             Console.WriteLine(encryptedMessage);
-
         }
     }
 }
